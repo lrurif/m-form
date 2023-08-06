@@ -1,4 +1,7 @@
 <script setup lang="ts">
+  import useStore from "./store/index"
+  const store = useStore();
+  
 </script>
 
 <template>
