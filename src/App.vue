@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import Bar from "@/components/Bar.jsx"
 </script>
 
 <template>
@@ -7,14 +6,14 @@
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
+    <Test></Test>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
-    <Bar></Bar>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .logo {
   height: 6em;
   padding: 1.5em;
