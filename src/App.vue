@@ -1,7 +1,5 @@
 <script setup lang="ts">
-  import useStore from "./store/index"
-  const store = useStore();
-  
+  import Bar from "@/components/Bar.jsx"
 </script>
 
 <template>
@@ -12,6 +10,7 @@
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
+    <Bar></Bar>
   </div>
 </template>
 
