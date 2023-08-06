@@ -2,6 +2,7 @@ import { defineStore, StoreDefinition } from "pinia";
 
 type state = {
     userName: string
+    token: string
 }
 type getters = {
 }
@@ -15,7 +16,8 @@ const useUserStore: StoreDefinition<
 > = defineStore("user", {
     state: () => {
         return {
-            userName: "11",
+            userName: "",
+            token: ","
         };
     }
 });
