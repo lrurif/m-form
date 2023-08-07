@@ -3,7 +3,7 @@
     let color = 'red'
     const Bar = defineComponent({
         render() {
-            return (<div style={{color: color}}>能男男女女</div>);
+            return (<div  class="text-3xl font-bold underline" style={{color: color}}>能男男女女</div>);
         },
     });
     export default Bar;

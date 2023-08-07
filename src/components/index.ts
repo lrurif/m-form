@@ -1,5 +1,5 @@
 import type { App } from "vue";
-const modules = import.meta.glob(["./*.vue", "!./index.vue"], {
+const modules = import.meta.glob(["./*.vue"], {
     eager: true,
 });
 export default {
