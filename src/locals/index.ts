@@ -1,7 +1,7 @@
 import { createI18n } from "vue-i18n";
 // 导入全局中英文配置对象
-import zh from './zh'
-import en from './en'
+import zh from './lang/zh'
+import en from './lang/en'
 const messages = {
     en,
     zh,
