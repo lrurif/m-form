@@ -33,7 +33,6 @@
 </template>
 <style lang="scss" scoped>
 
-@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500');
 @keyframes rocket-movement { 100% {transform: translate(1200px,-600px);} }
 @keyframes spin-earth{ 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); transition: transform 20s; } }
 
