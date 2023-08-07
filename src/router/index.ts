@@ -5,12 +5,20 @@ const router = createRouter({
     history: createWebHashHistory(),
     routes: [
         {
+            path: "/",
+            redirect: "/login",
+        },
+        {
             path: "/login",
             component: () => import("@/view/Login/index.vue"),
         },
         {
             path: "/register",
             component: () => import("@/view/Register/index.vue"),
+        },
+        {
+            path: "/:pathMatch(.*)*",
+            component: () => import("@/view/404/index.vue"),
         },
     ], // `routes: routes` 的缩写
 });
