@@ -32,30 +32,53 @@
     </body>
 </template>
 <style lang="scss" scoped>
-
-@keyframes rocket-movement { 100% {transform: translate(1200px,-600px);} }
-@keyframes spin-earth{ 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); transition: transform 20s; } }
-
-@keyframes move-astronaut{
-    100% { -webkit-transform: translate(-160px, -160px); transform:translate(-160px, -160px); }
-}
-@keyframes rotate-astronaut{
-    100% { -webkit-transform: rotate(-720deg); transform:rotate(-720deg); }
+@keyframes rocket-movement {
+    100% {
+        transform: translate(1200px, -600px);
+    }
 }
 
-@keyframes glow-star{
-    40% { -webkit-opacity: 0.3; opacity: 0.3;  }
-    90%,100% { -webkit-opacity: 1; opacity: 1; -webkit-transform: scale(1.2); transform: scale(1.2); border-radius: 999999px;}
+@keyframes spin-earth {
+    100% {
+        transform: rotate(-360deg);
+        transition: transform 20s;
+    }
 }
 
-.spin-earth-on-hover{
-    
+@keyframes move-astronaut {
+    100% {
+        transform: translate(-160px, -160px);
+    }
+}
+
+@keyframes rotate-astronaut {
+    100% {
+        transform: rotate(-720deg);
+    }
+}
+
+@keyframes glow-star {
+    40% {
+        opacity: 0.3;
+    }
+
+    90%,
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        border-radius: 999999px;
+    }
+}
+
+.spin-earth-on-hover {
+
     transition: ease 200s !important;
     transform: rotate(-3600deg) !important;
 }
 
 
-.bg-purple{
+.bg-purple {
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(180deg, #3f3162, #6a346a);
@@ -63,14 +86,14 @@
     background-size: cover;
     background-position: left top;
     overflow: hidden;
-    
+
 }
 
-.custom-navbar{
+.custom-navbar {
     padding-top: 15px;
 }
 
-.brand-logo{
+.brand-logo {
     margin-left: 25px;
     margin-top: 5px;
     display: inline-block;
@@ -81,25 +104,25 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
-.btn-request{
+.btn-request {
     padding: 10px 25px;
     border: 1px solid #FFCB39;
     border-radius: 100px;
     font-weight: 400;
 }
 
-.btn-request:hover{
+.btn-request:hover {
     background-color: #FFCB39;
     color: #fff;
     transform: scale(1.05);
-    box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
 }
 
-.btn-go-home{
+.btn-go-home {
     position: relative;
     z-index: 200;
     margin: 15px auto;
@@ -112,34 +135,29 @@ ul {
     color: white;
     text-align: center;
     text-decoration: none;
-    letter-spacing : 2px;
+    letter-spacing: 2px;
     font-size: 11px;
-    
-    -webkit-transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    -ms-transition: all 0.3s ease-in;
-    -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
 }
 
-.btn-go-home:hover{
+.btn-go-home:hover {
     background-color: #FFCB39;
     color: #fff;
     transform: scale(1.05);
-    box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
 }
 
-.central-body{
+.central-body {
     padding: 15% 40% 10% 40%;
     text-align: center;
 }
 
-.objects img{
+.objects img {
     z-index: 90;
     pointer-events: none;
 }
 
-.object_rocket{
+.object_rocket {
     z-index: 95;
     position: absolute;
     transform: translateX(-50px);
@@ -148,33 +166,24 @@ ul {
     animation: rocket-movement 200s linear infinite both running;
 }
 
-.object_earth{
+.object_earth {
     position: absolute;
     top: 20%;
     left: 15%;
     z-index: 90;
-/*    animation: spin-earth 100s infinite linear both;*/
 }
 
-.object_moon{
+.object_moon {
     position: absolute;
     top: 12%;
     left: 25%;
-/*
-    transform: rotate(0deg);
-    transition: transform ease-in 99999999999s;
-*/
 }
 
-.earth-moon{
-    
-}
-
-.object_astronaut{
+.object_astronaut {
     animation: rotate-astronaut 200s infinite linear both alternate;
 }
 
-.box_astronaut{
+.box_astronaut {
     z-index: 110 !important;
     position: absolute;
     top: 60%;
@@ -183,21 +192,21 @@ ul {
     animation: move-astronaut 50s infinite linear both alternate;
 }
 
-.image-404{
+.image-404 {
     position: relative;
     z-index: 100;
     width: 100%;
     pointer-events: none;
 }
 
-.stars{
+.stars {
     background: url(../../assets/images/404/overlay_stars.svg);
     background-repeat: repeat;
     background-size: contain;
     background-position: left top;
 }
 
-.glowing_stars .star{
+.glowing_stars .star {
     position: absolute;
     border-radius: 100%;
     background-color: #fff;
@@ -207,51 +216,54 @@ ul {
     will-change: opacity;
 }
 
-.glowing_stars .star:nth-child(1){
+.glowing_stars .star:nth-child(1) {
     top: 80%;
     left: 25%;
     animation: glow-star 2s infinite ease-in-out alternate 1s;
 }
-.glowing_stars .star:nth-child(2){
+
+.glowing_stars .star:nth-child(2) {
     top: 20%;
     left: 40%;
     animation: glow-star 2s infinite ease-in-out alternate 3s;
 }
-.glowing_stars .star:nth-child(3){
+
+.glowing_stars .star:nth-child(3) {
     top: 25%;
     left: 25%;
     animation: glow-star 2s infinite ease-in-out alternate 5s;
 }
-.glowing_stars .star:nth-child(4){
+
+.glowing_stars .star:nth-child(4) {
     top: 75%;
     left: 80%;
     animation: glow-star 2s infinite ease-in-out alternate 7s;
 }
-.glowing_stars .star:nth-child(5){
+
+.glowing_stars .star:nth-child(5) {
     top: 90%;
     left: 50%;
     animation: glow-star 2s infinite ease-in-out alternate 9s;
 }
 
-@media only screen and (max-width: 600px){
-    .navbar-links{
+@media only screen and (max-width: 600px) {
+    .navbar-links {
         display: none;
     }
-    
-    .custom-navbar{
+
+    .custom-navbar {
         text-align: center;
     }
-    
-    .brand-logo img{
+
+    .brand-logo img {
         width: 120px;
     }
-    
-    .box_astronaut{
+
+    .box_astronaut {
         top: 70%;
     }
-    
-    .central-body{
+
+    .central-body {
         padding-top: 25%;
     }
-}
-</style>
+}</style>
