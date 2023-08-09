@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { getCurrentInstance } from "vue"
 import { usePreferredDark } from "@vueuse/core"
+import animationView from "@/layouts/animation-view.vue"
+
 const isDark = usePreferredDark();
 console.log(isDark, 'isDark');
 const { proxy } = getCurrentInstance();
@@ -13,13 +15,21 @@ const toggleLanguage = () => {
 }
 </script>
 <template>
-    <router-link to="/login">登录</router-link>
-    <router-link to="/register">注册</router-link>
-    <router-link to="/404">404</router-link>
-    <div>{{ $t("common.hello") }}</div>
-    <button @click="toggleLanguage">切换语言</button>
-    <test></test>
-    <icon-carbon-accessibility style="color: red;font-size: 30px;"></icon-carbon-accessibility>
-    <icon-emojione-v1-top-hat></icon-emojione-v1-top-hat>
+    <div>
+
+        <router-link to="/login">登录</router-link>
+        <router-link to="/register">注册</router-link>
+        <router-link to="/404">404</router-link>
+        <div>{{ $t("common.hello") }}</div>
+        <button @click="toggleLanguage">切换语言</button>
+        <test></test>
+        <router-link to="/login/aa">去往aa</router-link>
+
+        <router-link to="/login/bb">去往bb</router-link>
+
+        <icon-carbon-accessibility style="color: red;font-size: 30px;"></icon-carbon-accessibility>
+        <icon-emojione-v1-top-hat></icon-emojione-v1-top-hat>
+        <animationView></animationView>
+    </div>
 </template>
 <style lang="scss" scoped></style>

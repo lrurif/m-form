@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 </script>
 <template>
-    <body class="bg-purple">
+    <div class="bg-purple">
 
         <div class="stars">
             <div class="central-body">
@@ -29,7 +29,7 @@
 
         </div>
 
-    </body>
+    </div>
 </template>
 <style lang="scss" scoped>
 @keyframes rocket-movement {
