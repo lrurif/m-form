@@ -18,5 +18,8 @@ const toggleLanguage = () => {
     <router-link to="/404">404</router-link>
     <div>{{ $t("common.hello") }}</div>
     <button @click="toggleLanguage">切换语言</button>
+    <test></test>
+    <icon-carbon-accessibility style="color: red;font-size: 30px;"></icon-carbon-accessibility>
+    <icon-emojione-v1-top-hat></icon-emojione-v1-top-hat>
 </template>
 <style lang="scss" scoped></style>
