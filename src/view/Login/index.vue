@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import { getCurrentInstance } from "vue"
+import { usePreferredDark } from "@vueuse/core"
+const isDark = usePreferredDark();
+console.log(isDark, 'isDark');
 const { proxy } = getCurrentInstance();
 const toggleLanguage = () => {
     if (proxy.$i18n.locale === 'zh') {   // 判断当前语言
