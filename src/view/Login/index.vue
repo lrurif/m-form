@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { getCurrentInstance } from "vue"
-
 const { proxy } = getCurrentInstance();
 const toggleLanguage = () => {
     if (proxy.$i18n.locale === 'zh') {   // 判断当前语言
