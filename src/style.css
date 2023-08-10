@@ -2,5 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  
+    --el-bg-color: rgb(255, 255, 255);
+    --el-color-primary: rgb(245, 120, 3);
+    --el-text-color-primary: rgb(245, 120, 3);
+    --el-text-color-regular: #333;
 }

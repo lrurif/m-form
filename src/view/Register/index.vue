@@ -1,24 +1,31 @@
 <script lang="ts" setup>
-    onMounted(() => {
-        let yinyong = document.querySelector(".yinyong");
-        let dingwei = document.querySelector(".dingwei") as HTMLElement;
-        const originDom = yinyong;
-        while(yinyong.parentElement) {
-            yinyong = yinyong.parentElement;
-            if(/[auto|scroll]/.test(getComputedStyle(yinyong).overflow)) {
-                console.log(yinyong);
-                yinyong.addEventListener("scroll", update)
-            }
+onMounted(() => {
+    let yinyong = document.querySelector(".yinyong");
+    let dingwei = document.querySelector(".dingwei") as HTMLElement;
+    const originDom = yinyong;
+    while (yinyong?.parentElement) {
+        yinyong = yinyong.parentElement;
+        if (/[auto|scroll]/.test(getComputedStyle(yinyong).overflow)) {
+            yinyong.addEventListener("scroll", update)
+            onUnmounted(() => {
+                yinyong.removeEventListener("scroll", update)
+            });
         }
-        window.addEventListener("scroll", update)
-        function update() {
-            let pos = originDom.getBoundingClientRect();
-            console.log(pos.left, pos.top);
-            dingwei.style.left = `${pos.left}px`;
-            dingwei.style.top = `${pos.top + pos.height}px`;
-        }
-        update();
-    })
+    }
+    window.addEventListener("scroll", update)
+    onUnmounted(() => {
+        window.removeEventListener("scroll", update)
+    });
+
+    function update() {
+        let pos = originDom.getBoundingClientRect();
+        dingwei.style.left = `${pos.left}px`;
+        dingwei.style.top = `${pos.top + pos.height}px`;
+    }
+    requestAnimationFrame(update)
+    
+
+})
 </script>
 <template>
     <div style="height: 10000px;">

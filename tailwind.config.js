@@ -6,7 +6,14 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        bg_color: "var(--el-bg-color)",
+        primary: "var(--el-color-primary)",
+        text_color_primary: "var(--el-text-color-primary)",
+        text_color_regular: "var(--el-text-color-regular)"
+      }
+    }
   },
   plugins: [],
 }

@@ -30,7 +30,7 @@ const toggleLanguage = () => {
         <icon-carbon-accessibility style="color: red;font-size: 30px;"></icon-carbon-accessibility>
         <icon-emojione-v1-top-hat></icon-emojione-v1-top-hat>
         <animationView></animationView>
-        <div class="menu min-[400px]:text-center dark:bg-slate-800 dark:text-white red:text-orange-500">menu</div>
+        <div class="menu min-[400px]:text-center dark:bg-slate-800 dark:text-white red:text-orange-500 bg_color">menu</div>
     </div>
 </template>
 <style lang="scss" scoped>
