@@ -5,7 +5,7 @@ const Bar = defineComponent({
     setup() {
         let color = null;
         onMounted(() => {
-            color = useCssVar('--el-bg-color', document.documentElement)
+            color = useCssVar('--color-primary', document.documentElement)
         })
         return {
             run() {
@@ -15,8 +15,8 @@ const Bar = defineComponent({
         }
     },
     render() {
-        return (<div class="text-3xl font-bold underline text-primary bg-bg_color" onClick={this.run}>
-            111222333
+        return (<div class="text-3xl font-bold underline text-primary text-color-primary" onClick={this.run}>
+            自动导入组件
         </div>);
     },
 });
