@@ -2,8 +2,9 @@
 import { getCurrentInstance } from "vue"
 import { usePreferredDark } from "@vueuse/core"
 import animationView from "@/layouts/animation-view.vue"
-
+import useUserStore from "@/store/modules/user";
 const isDark = usePreferredDark();
+const userStore = useUserStore();
 console.log(isDark, 'isDark');
 const { proxy } = getCurrentInstance();
 const toggleLanguage = () => {
@@ -12,6 +13,11 @@ const toggleLanguage = () => {
     } else {
         proxy.$i18n.locale = 'zh'
     }
+}
+const changeToken = () => {
+    userStore.$patch({
+        token: "2222"
+    })
 }
 </script>
 <template>
@@ -31,6 +37,8 @@ const toggleLanguage = () => {
         <icon-emojione-v1-top-hat></icon-emojione-v1-top-hat>
         <animationView></animationView>
         <div class="menu min-[400px]:text-center dark:bg-slate-800 dark:text-white red:text-orange-500 bg_color">menu</div>
+        <div>我的token：{{ userStore.token }}</div>
+        <button @click="changeToken">修改我的token</button>
     </div>
 </template>
 <style lang="scss" scoped>

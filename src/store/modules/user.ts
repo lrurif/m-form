@@ -17,8 +17,9 @@ const useUserStore: StoreDefinition<
     state: () => {
         return {
             userName: "",
-            token: ","
+            token: "123"
         };
-    }
+    },
+    persist: true,
 });
 export default useUserStore;
