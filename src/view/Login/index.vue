@@ -21,7 +21,7 @@ const changeToken = () => {
 }
 </script>
 <template>
-    <div>
+    <div class="primary w-[120px] sm:bg-[#f8f8f8] md:bg-[#f5b6b6] lg:bg-[#f27777] xl:bg-[#f22c2c] 2xl:bg-[#170606]">
 
         <router-link to="/login">登录</router-link>
         <router-link to="/register">注册</router-link>
@@ -46,5 +46,8 @@ const changeToken = () => {
     --name: 1000px;
     $name: var(--name);
     width: $name;
+}
+.primary {
+    color: theme('vars.color-primary');
 }
 </style>

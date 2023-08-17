@@ -17,6 +17,7 @@ const Bar = defineComponent({
     render() {
         return (<div class="text-3xl font-bold underline text-primary text-color-primary" onClick={this.run}>
             自动导入组件
+            <div class="text-color-text-primary">白色文字</div>
         </div>);
     },
 });
