@@ -1,0 +1,1 @@
+export * as installComs from "./src/FormItemList/install.js"

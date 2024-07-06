@@ -1,45 +1,17 @@
 {
-  "name": "vite4-vue3-ts-template",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "m-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite --host --open",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "dev": "pnpm run --filter @m-form/demo dev"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@iconify/iconify": "^3.1.1",
-    "@vueuse/core": "^10.3.0",
-    "axios": "^1.4.0",
-    "bignumber.js": "^9.1.1",
-    "dayjs": "^1.11.9",
-    "normalize.css": "^8.0.1",
-    "nprogress": "^0.2.0",
-    "pinia": "^2.1.6",
-    "pinia-plugin-persistedstate": "^3.2.0",
-    "tailwindcss": "^3.3.3",
-    "vue": "^3.3.4",
-    "vue-i18n": "^9.2.2",
-    "vue-router": "^4.2.4"
-  },
-  "devDependencies": {
-    "@iconify/json": "^2.2.100",
-    "@types/axios": "^0.14.0",
-    "@types/node": "^20.4.8",
-    "@vitejs/plugin-vue": "^4.2.3",
-    "@vitejs/plugin-vue-jsx": "^3.0.1",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.27",
-    "sass": "^1.64.2",
-    "sass-loader": "^13.3.2",
-    "typescript": "^5.0.2",
-    "unplugin-auto-import": "^0.16.6",
-    "unplugin-icons": "^0.16.5",
-    "unplugin-vue-components": "^0.25.1",
-    "vite": "^4.4.5",
-    "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-html": "^3.2.0",
-    "vue-tsc": "^1.8.5"
+    "@m-form/form-generate": "workspace:^",
+    "filter": "^0.1.1",
+    "vue": "^3.4.27"
   }
 }

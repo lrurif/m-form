@@ -1,0 +1,13 @@
+{
+  "name": "@m-form/core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.4.31"
+  }
+}
