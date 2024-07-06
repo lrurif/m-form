@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@m-form/core": "workspace:^",
+    "lodash-es": "^4.17.21",
+    "vue": "^3.4.31"
+  }
 }

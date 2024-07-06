@@ -6,7 +6,6 @@ import { provide } from 'vue';
 
 const store = useFormDesign();
 provide("store", store)
-
 </script>
 
 <template>

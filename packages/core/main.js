@@ -1,1 +1,1 @@
-export * as installComs from "./src/FormItemList/install.js"
+export { default as installComs} from "./src/FormItemList/install.js"
