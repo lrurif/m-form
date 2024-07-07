@@ -10,8 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@m-form/form-generate": "workspace:^",
-    "filter": "^0.1.1",
+    "@element-plus/icons-vue": "^2.3.1",
     "vue": "^3.4.27"
   }
 }
