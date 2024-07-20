@@ -64,7 +64,7 @@ formRefs.add(formRef);
       @submit.prevent
     >
       <!-- eslint-disable -->
-        <drag v-model:data-source="dataSource.children" is-child />
+        <drag v-model:data-source="dataSource.children" is-child  :loop-data="loopData" :index="index" :loop-origin-data="loopOriginData"/>
       </el-form>
   </el-form-item>
 </template>

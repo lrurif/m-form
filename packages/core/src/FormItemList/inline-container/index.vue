@@ -27,7 +27,7 @@ const gutter = computed(() => {
             width: '100%',
             '--gutter': gutter,
             'justify-content': setApis.attrs.justify || 'flex-start'
-           }"/>
+           }"  :loop-data="loopData" :index="index" :loop-origin-data="loopOriginData"/>
   </el-form-item>
 </template>
 
